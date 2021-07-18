@@ -37,7 +37,7 @@ overlay.addEventListener("click", (e) => {
   if (e.target === prev || e.target === next) {
     return;
   } else {
-    overlay.style.display = "none";
+    close();
   }
 });
 

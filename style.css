@@ -6,22 +6,23 @@
 }
 
 body {
-  height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 #title {
   text-align: center;
 }
 #paragraph {
   text-align: center;
+  margin-bottom: 20px;
 }
 #container {
   display: flex;
   flex-wrap: wrap;
   width: 1000px;
+
   align-items: center;
   justify-content: center;
   gap: 30px;
@@ -30,6 +31,7 @@ body {
 .image {
   height: 150px;
   cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 .overlay-image {
   height: 150px;
@@ -89,4 +91,40 @@ body {
 }
 #next {
   right: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  #container {
+    width: 100%;
+  }
+  #prev {
+    left: 0;
+  }
+  #next {
+    right: 0;
+  }
+  #display-image {
+    height: 500px;
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #container {
+    width: 100%;
+  }
+  #display-image {
+    height: 300px;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image {
+    height: 200px;
+  }
+  #display-image {
+    height: 250px;
+    width: 450px;
+  }
 }
